@@ -18,6 +18,13 @@ class StringCalculatorShould {
         assertEquals(1, stringCalculator.add("1"));
     }
 
+    @Test
+    void hadle_multiple_input_string(){
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(6,stringCalculator.add("1,2,3"));
+    }
+
+
 
 
 
