@@ -19,7 +19,7 @@ class StringCalculator {
                 netiveNumberList.add(Integer.valueOf(str));
         }
         if(inputs.length==1){
-            if(Integer.valueOf(str)>1000)
+            if(Integer.valueOf(input)>1000)
                 return 0;
             if(Integer.valueOf(input)<0)
                 throw new NegetivesNotAllowedException("Negetive value not allowed -"+netiveNumberList.toString());
