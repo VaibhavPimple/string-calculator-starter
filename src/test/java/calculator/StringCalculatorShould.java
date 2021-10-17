@@ -46,6 +46,12 @@ class StringCalculatorShould {
         assertEquals(2,stringCalculator.add("1001,2"));
     }
 
+    //Allow diffrent delimeter
+    @Test
+    void allowDiffrentDelimeter() throws NegetivesNotAllowedException {
+        assertEquals(3,stringCalculator.add("//;1;2"));
+    }
+
 
 
 
