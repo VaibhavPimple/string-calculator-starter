@@ -13,14 +13,19 @@ class StringCalculator {
 
         String[] inputs=input.split(",");
         // System.out.println(Arrays.toString(inputs));
+        List<Integer> netiveNumberList=new LinkedList<>();
+        for(String str :inputs){
+            if(Integer.valueOf(str)<0)
+                netiveNumberList.add(Integer.valueOf(str));
+        }
         if(inputs.length==1){
             if(Integer.valueOf(input)<0)
-                throw new NegetivesNotAllowedException("Negetive value not allowed");
+                throw new NegetivesNotAllowedException("Negetive value not allowed -"+netiveNumberList.toString());
             return Integer.valueOf(input);
         }
         for(String str : inputs){
             if(Integer.valueOf(str)<0)
-                throw new NegetivesNotAllowedException("Negetive value not allowed");
+                throw new NegetivesNotAllowedException("Negetive value not allowed"+netiveNumberList.toString());
             sum=sum + Integer.valueOf(str);
         }
 
