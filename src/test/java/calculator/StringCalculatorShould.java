@@ -8,25 +8,25 @@ class StringCalculatorShould {
     StringCalculator stringCalculator = new StringCalculator();
 
     @Test
-    void empty_string_should_return_0() {
-        StringCalculator stringCalculator = new StringCalculator();
+    void empty_string_should_return_0() throws NegetivesNotAllowedException {
+
         assertEquals(0, stringCalculator.add(""));
     }
 
     @Test
-    void string_with_single_number_should_return_number_as_int() {
-        StringCalculator stringCalculator = new StringCalculator();
+    void string_with_single_number_should_return_number_as_int() throws NegetivesNotAllowedException {
+
         assertEquals(1, stringCalculator.add("1"));
     }
 
     @Test
-    void hadle_multiple_input_string(){
-        StringCalculator stringCalculator = new StringCalculator();
+    void hadle_multiple_input_string() throws NegetivesNotAllowedException {
+
         assertEquals(6,stringCalculator.add("1,2,3"));
     }
 
     @Test
-    void handeNewLines(){
+    void handeNewLines() throws NegetivesNotAllowedException {
         assertEquals(6,stringCalculator.add("1\n2,3"));
     }
 

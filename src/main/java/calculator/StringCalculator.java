@@ -2,7 +2,7 @@ package calculator;
 import java.util.*;
 class StringCalculator {
 
-    public int add(String input) {
+    public int add(String input) throws NegetivesNotAllowedException {
         input=input.replace("\n",",");
 
 
@@ -14,9 +14,13 @@ class StringCalculator {
         String[] inputs=input.split(",");
         // System.out.println(Arrays.toString(inputs));
         if(inputs.length==1){
+            if(Integer.valueOf(input)<0)
+                throw new NegetivesNotAllowedException("Negetive value not allowed");
             return Integer.valueOf(input);
         }
         for(String str : inputs){
+            if(Integer.valueOf(str)<0)
+                throw new NegetivesNotAllowedException("Negetive value not allowed");
             sum=sum + Integer.valueOf(str);
         }
 
