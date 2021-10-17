@@ -40,6 +40,11 @@ class StringCalculatorShould {
             assertTrue(exeption instanceof NegetivesNotAllowedException);
         }
     }
+    //number bigger than 1000 should be ingored
+    @Test
+    void ignoreBiggerNumber() throws NegetivesNotAllowedException {
+        assertEquals(2,stringCalculator.add("1001,2"));
+    }
 
 
 
