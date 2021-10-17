@@ -30,6 +30,19 @@ class StringCalculatorShould {
         assertEquals(6,stringCalculator.add("1\n2,3"));
     }
 
+    @Test()
+    void negetiveNotAllowed(){
+        try {
+
+            stringCalculator.add("-1,3");
+            fail("excetion not thrown");
+        }catch (Exception exeption){
+            assertTrue(exeption instanceof NegetivesNotAllowedException);
+        }
+    }
+
+
+
 
 
 

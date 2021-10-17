@@ -3,7 +3,7 @@ import java.util.*;
 class StringCalculator {
 
     public int add(String input) {
-        input=input.replace("\n","");
+        input=input.replace("\n",",");
 
 
         if(input.equals(""))
