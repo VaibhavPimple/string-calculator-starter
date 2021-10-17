@@ -3,9 +3,10 @@ import java.util.*;
 class StringCalculator {
 
     public int add(String input) throws NegetivesNotAllowedException {
-        char delimeter=',';
-        String sDelimeter=",";
-        int sum=0;
+          char delimeter=',';
+          String sDelimeter=",";
+          int sum=0;
+        //input=input.replace("\n",sDelimeter);
 
         if(input.startsWith("//")){
             delimeter=input.charAt(2);
@@ -15,12 +16,14 @@ class StringCalculator {
         input=input.replace("\n",sDelimeter);
 
 
+
         if(input.equals(""))
             return 0;
 
 
-
         String[] inputs=input.split(sDelimeter);
+        //String[] inputs=input.useDelimeter(sDelimeter);
+
         // System.out.println(Arrays.toString(inputs));
         List<Integer> netiveNumberList=new LinkedList<>();
         for(String str :inputs){

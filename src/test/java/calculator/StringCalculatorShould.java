@@ -52,4 +52,5 @@ class StringCalculatorShould {
         assertEquals(3,stringCalculator.add("//;1;2"));
     }
 
+
 }
