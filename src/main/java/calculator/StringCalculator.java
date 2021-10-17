@@ -4,24 +4,23 @@ class StringCalculator {
 
     public int add(String input) throws NegetivesNotAllowedException {
         char delimeter=',';
-        String sDelimeter=null;
-        String newInput=null;
+        String sDelimeter=",";
+        int sum=0;
+
         if(input.startsWith("//")){
             delimeter=input.charAt(2);
-            newInput=input.substring(3);
+            input=input.substring(3);
         }
-        System.out.println(input);
-        System.out.println(newInput);
         sDelimeter=Character.toString(delimeter);
         input=input.replace("\n",sDelimeter);
 
 
-        if(newInput.equals(""))
+        if(input.equals(""))
             return 0;
-        int sum=0;
 
 
-        String[] inputs=newInput.split(sDelimeter);
+
+        String[] inputs=input.split(sDelimeter);
         // System.out.println(Arrays.toString(inputs));
         List<Integer> netiveNumberList=new LinkedList<>();
         for(String str :inputs){
@@ -29,9 +28,9 @@ class StringCalculator {
                 netiveNumberList.add(Integer.valueOf(str));
         }
         if(inputs.length==1){
-            if(Integer.valueOf(newInput)>1000)
+            if(Integer.valueOf(input)>1000)
                 return 0;
-            if(Integer.valueOf(newInput)<0)
+            if(Integer.valueOf(input)<0)
                 throw new NegetivesNotAllowedException("Negetive value not allowed -"+netiveNumberList.toString());
             return Integer.valueOf(input);
         }
