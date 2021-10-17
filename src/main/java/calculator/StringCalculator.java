@@ -45,7 +45,6 @@ class StringCalculator {
             sum=sum + Integer.valueOf(str);
         }
 
-
         return sum;
     }
 
