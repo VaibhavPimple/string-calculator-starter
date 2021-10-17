@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class StringCalculatorShould {
+    StringCalculator stringCalculator = new StringCalculator();
 
     @Test
     void empty_string_should_return_0() {
@@ -23,6 +24,12 @@ class StringCalculatorShould {
         StringCalculator stringCalculator = new StringCalculator();
         assertEquals(6,stringCalculator.add("1,2,3"));
     }
+
+    @Test
+    void handeNewLines(){
+        assertEquals(6,stringCalculator.add("1\n2,3"));
+    }
+
 
 
 
